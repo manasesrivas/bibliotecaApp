@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    tools:context=".DetailBookActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detalles_libro"
+        android:layout_marginTop="30dp"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/label_titulo"/>
+
+    <TextView
+
+        android:id="@+id/label_titulo"
+        android:text="Titulo"
+        style="@style/style_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/etTitulo"/>
+
+
+    <EditText
+        android:id="@+id/etTitulo"
+        style="@style/style_edittex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_titulo"
+        app:layout_constraintBottom_toTopOf="@+id/label_autor"/>
+
+    <TextView
+        android:id="@+id/label_autor"
+        android:text="Autor"
+        style="@style/style_label"
+        app:layout_constraintBottom_toTopOf="@+id/etAutor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
+
+    <EditText
+        android:id="@+id/etAutor"
+        style="@style/style_edittex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_autor"
+        app:layout_constraintBottom_toTopOf="@+id/label_editorial"
+
+        />
+
+
+    <TextView
+        android:id="@+id/label_editorial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAutor"
+        app:layout_constraintBottom_toTopOf="@+id/etEditorial"
+        android:text="Editorial"
+        style="@style/style_label"
+
+        />
+    <EditText
+        android:id="@+id/etEditorial"
+        style="@style/style_edittex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_editorial"
+        app:layout_constraintBottom_toTopOf="@+id/label_edicion"/>
+
+    <TextView
+
+        android:id="@+id/label_edicion"
+        android:text="Edicion"
+        style="@style/style_label"
+        app:layout_constraintBottom_toTopOf="@+id/etEdicion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEditorial" />
+
+    <EditText
+        android:id="@+id/etEdicion"
+        style="@style/style_edittex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_edicion"
+        app:layout_constraintBottom_toTopOf="@+id/label_adquisicion" />
+
+    <TextView
+
+        android:id="@+id/label_adquisicion"
+        android:text="Tipo de adquisicion"
+        style="@style/style_label"
+        app:layout_constraintBottom_toTopOf="@+id/etTipoAdquisicion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEdicion" />
+
+    <EditText
+        android:id="@+id/etTipoAdquisicion"
+        style="@style/style_edittex"
+        app:layout_constraintTop_toBottomOf="@id/label_adquisicion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eliminar"
+        style="@style/style_boton_delete"
+        android:id="@+id/btnDelete"
+        app:layout_constraintTop_toBottomOf="@+id/etTipoAdquisicion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/style_boton"
+        android:id="@id/btnSave"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintTop_toBottomOf="@+id/etTipoAdquisicion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDelete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

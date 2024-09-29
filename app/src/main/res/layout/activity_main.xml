@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/background_app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/book_lover_81_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textWelcomeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/biemvenida"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageWelcome"
+
+        />
+
+    <TextView
+        android:id="@+id/postWelcomeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/postWelcome"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWelcomeId" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:width="234dp"
+        android:height="65dp"
+        android:backgroundTint="#21303D"
+        android:text="Comenzar"
+        android:textColor="#6D9DC9"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postWelcomeId" />
+</androidx.constraintlayout.widget.ConstraintLayout>

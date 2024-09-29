@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">biblioteca</string>
+
+    <string name="biemvenida">bienvenido</string>
+    <string name="postWelcome">Sistema administrativo bibliotecario</string>
+    <string name="agregar_libro">Agregar libro</string>
+    <string name="detalles_libro">Detalles libro</string>
+</resources>
